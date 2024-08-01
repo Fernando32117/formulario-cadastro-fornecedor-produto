@@ -121,19 +121,25 @@
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="dado2_1">UND. Medida<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="dado2_1">
+                                    <select class="form-control col-md-12" id="dado2_1">
+                                        <option selected></option>
+                                        <option value="1" for="un">UN</option>
+                                        <option value="2" for="kg">KG</option>
+                                        <option value="3" for="m">M</option>
+                                    </select>
+                                    <!-- <input type="text" class="form-control" id="dado2_1"> -->
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="dado3_1">QDTDE. em Estoque<span class="text-danger">*</span></label>
-                                    <input type="number" class="form-control quantity-input" id="dado2_1">
+                                    <input type="number" class="form-control quantity-input" id="dado3_1">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="dado4_1">Valor Unitário<span class="text-danger">*</span></label>
-                                    <input type="number" class="form-control unit-price-input" id="dado2_1">
+                                    <input type="number" class="form-control unit-price-input" id="dado4_1">
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="dado5_1">Valor Total</label>
-                                    <input type="number" disabled class="form-control total-price-input" id="dado2_1">
+                                    <input type="number" disabled class="form-control total-price-input" id="dado5_1">
                                 </div>
                             </div>
                         </form>

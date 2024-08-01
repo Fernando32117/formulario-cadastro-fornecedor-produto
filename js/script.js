@@ -23,12 +23,17 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="form-group col-md-7">
-                            <label for="dado1_${productCount}">Produto<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="dado1_${productCount}">
+                            <label for="dado1_${productCount}"><span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="dado1_1${productCount}">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="dado2_${productCount}">UND. Medida<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="dado2_${productCount}">
+                            <select class="form-control col-md-12" id="dado2_${productCount}">
+                                        <option selected></option>
+                                        <option value="1" for="un">UN</option>
+                                        <option value="2" for="kg">KG</option>
+                                        <option value="3" for="m">M</option>
+                                    </select>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="dado3_${productCount}">QDTDE. em Estoque<span class="text-danger">*</span></label>
@@ -135,7 +140,7 @@ $(document).ready(function () {
             let produto = {
                 dado1: $(element).find(`#dado1_${index + 1}`).val(),
                 dado2: $(element).find(`#dado2_${index + 1}`).val(),
-                dado3: $(element).find(`#dado3_${index + 1}`).val(),
+                dado3: $(element).find(`#dado3_${index + 1}`).val(),                
                 dado4: $(element).find(`#dado4_${index + 1}`).val(),
                 dado5: $(element).find(`#dado5_${index + 1}`).val()
             };
@@ -206,7 +211,7 @@ $(document).ready(function () {
 
         $('#modal-products').empty();
         formData.produtos.forEach((produto, index) => {
-            $('#modal-products').append(`<li>Produto ${index + 1}: Produto: ${produto.dado1}, <li>UND. Medida do Produto ${index + 1}: ${produto.dado2}, <li>QDTDE. em Estoque do Produto ${index + 1}: ${produto.dado5}, <li>Valor Unitário do Produto ${index + 1}: ${produto.dado5}, <li>Valor Total do Produto ${index + 1}: ${produto.totalPrice}</li>`);
+            $('#modal-products').append(`<li>Produto ${index + 1}: ${produto.dado1}, <li>UND. Medida do Produto ${index + 1}: ${produto.dado2}, <li>QDTDE. em Estoque do Produto ${index + 1}: ${produto.dado5}, <li>Valor Unitário do Produto ${index + 1}: ${produto.dado5}, <li>Valor Total do Produto ${index + 1}: ${produto.totalPrice}</li>`);
         });
 
         $('#modal-files').empty();
