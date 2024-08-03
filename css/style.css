@@ -1,40 +1,41 @@
-#products-container, #general-form, #files-container{
+#products-container,
+#general-form,
+#files-container {
     border: 1px solid #706e6e;
     padding: 5px;
     border-radius: 5px;
     margin-top: 10px;
 }
 
-form{
-}
-
-#add-button, #add-file-button, #save-button {
+#add-button,
+#add-file-button,
+#save-button {
     width: 100%;
     margin-bottom: 0.8rem;
     background-color: #09970f;
     font-weight: bold;
 }
 
-#save-button{
+#save-button {
     margin-top: 20px;
 }
 
-.fornecedor label{
+.fornecedor label {
     margin-bottom: 0;
     font-weight: bold;
 }
 
-.container label{
+.container label {
     font-weight: bold;
 }
 
-h2 {  
+h2 {
     text-align: center;
 }
 
-h5{
+h5 {
     color: white;
-    text-align: left;  
+    text-align: left;
     background-color: #1d83a7;
     padding: 10px;
     margin-top: 2px;
@@ -42,19 +43,52 @@ h5{
     border-top-left-radius: 10px;
 }
 
-.file-eye-icon{
+.file-eye-icon {
     font-size: 100px;
 }
 
-.round-div {  
-    border-radius: 60%;
-    width: 100px; 
-    height: 100px; 
-    background-color: #8392cc;  
+.round-div {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 85px;
+    height: 85px;
+    display: flex;
     align-items: center;
-    display: inline; 
-    align-items: left;   
-    justify-content: center; 
-    font-size: 50px;    
-    color: white;
-} 
+    justify-content: center;
+    border: 2px solid #ddd;
+    background-color: #8392cc;
+}
+
+.round-div img {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+}
+
+.titulo-produto {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* .bordered-section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+} */
+
+.product-row {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.remove-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+

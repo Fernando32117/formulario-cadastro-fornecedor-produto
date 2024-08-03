@@ -49,7 +49,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="cep">CEP<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="cep">
+                            <input type="text" class="form-control" id="cep" maxlength="9">
                         </div>
                         <div class="form-group col-md-5">
                             <label for="inscricaoMunicipal">Inscrição Municipal</label>
@@ -59,10 +59,10 @@
                     <div class="form-row">
                         <div class="form-group col-md-7">
                             <label for="endereco">Endereço<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="endereco">
+                            <input type="text" class="form-control" id="endereco" disabled>
                         </div>
                         <div class="form-group col-md-5">
-                            <label for="numero">Número</label>
+                            <label for="numero">Número<span class="text-danger">*</span></label>
                             <input type="number" class="form-control" id="numero">
                         </div>
                     </div>
@@ -73,15 +73,15 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="bairro">Bairro<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="bairro">
+                            <input type="text" class="form-control" id="bairro" disabled>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="municipio">Município<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="municipio">
+                            <input type="text" class="form-control" id="municipio" disabled>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="estado">Estado<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="estado">
+                            <input type="text" class="form-control" id="estado" disabled>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="nomeContato">Nome da Pessoa de Contato<span class="text-danger">*</span></label>
@@ -100,54 +100,55 @@
             </div>
 
             <div class="bordered-section" id="products-container">
-                <h5 class="">Produtos</h5>
-                <div class="row product-row align-items-center mb-3">
-                    <div class="col-1 text-center">
-                        <button class="remove-button btn btn-danger">remover</button>
-                    </div>
-                    <div class="col-11">
-                        <span class="titulo-produto">Produto 1</span>
-                        <form class="form-row">
-                            <div class="form-row">
-                                <div class="mt-4">
-                                    <div class="round-div col-1">
-                                        <i class=""><img src="caixa.png" alt=""
-                                                style=" width: 50px; height: 50px; padding: 5px; margin-top: 2px;"></i>
+                <h5 class="mb-4">Produtos</h5>
+                <div class="product-row mb-3">
+                    <div class="row align-items-center">
+                        <div class="col-1 text-center">
+                            <button class="remove-button btn btn-danger"><img src="img/lixeira.png" alt="" style="width: 24px; height: 24px;"></button>
+                        </div>
+                        <div class="col-1">
+                            <div class="round-div">
+                                <img src="img/caixa.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <form class="form">
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="dado1_1">Produto<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="dado1_1">
                                     </div>
                                 </div>
-                                <div class="form-group col-md-7">
-                                    <label for="dado1_1">Produto<span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="dado1_1">
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="dado2_1">UND. Medida<span class="text-danger">*</span></label>
+                                        <select class="form-control" id="dado2_1">
+                                            <option ></option>
+                                            <option value="1">UN</option>
+                                            <option value="2">KG</option>
+                                            <option value="3">M</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="dado3_1">QDTDE. em Estoque<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="dado3_1">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="dado4_1">Valor Unitário<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="dado4_1">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="dado5_1">Valor Total</label>
+                                        <input type="number" disabled class="form-control" id="dado5_1">
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-3">
-                                    <label for="dado2_1">UND. Medida<span class="text-danger">*</span></label>
-                                    <select class="form-control col-md-12" id="dado2_1">
-                                        <option selected></option>
-                                        <option value="1" for="un">UN</option>
-                                        <option value="2" for="kg">KG</option>
-                                        <option value="3" for="m">M</option>
-                                    </select>
-                                    <!-- <input type="text" class="form-control" id="dado2_1"> -->
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="dado3_1">QDTDE. em Estoque<span class="text-danger">*</span></label>
-                                    <input type="number" class="form-control quantity-input" id="dado3_1">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="dado4_1">Valor Unitário<span class="text-danger">*</span></label>
-                                    <input type="number" class="form-control unit-price-input" id="dado4_1">
-                                </div>
-                                <div class="form-group col-md-3">
-                                    <label for="dado5_1">Valor Total</label>
-                                    <input type="number" disabled class="form-control total-price-input" id="dado5_1">
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col">
-                        <button id="add-button" class="btn btn-success">Adicionar produto</button>
+                        <button id="add-button" class="btn btn-success">Adicionar Produto</button>
                     </div>
                 </div>
                 <label for="email"><span class="text-danger">* Campos Obrigatórios</span></label>
@@ -162,7 +163,7 @@
                 <button id="add-file-button" class="btn btn-secondary">Incluir Anexo</button>
             </div>
 
-            <button type="submit" class="btn btn-success ml-2" id="save-button">Salvar Fornecedor</button>
+            <button type="submit" class="btn btn-success" id="save-button">Salvar Fornecedor</button>
 
             <!-- Modal -->
             <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
