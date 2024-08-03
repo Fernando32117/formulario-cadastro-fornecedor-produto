@@ -97,6 +97,7 @@ $(document).ready(function () {
         productCount++;
         let newProductHtml = `
             <div class="product-row mb-3">
+            <div class="product-label">Produto - ${productCount}</div>
         <div class="row align-items-center">
             <div class="col-1 text-center">
                 <button class="remove-button btn btn-danger"><img src="img/lixeira.png" alt="" style="width: 24px; height: 24px;"></button>
@@ -110,7 +111,7 @@ $(document).ready(function () {
                 <form class="form">
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="dado1_${productCount}">Produto${productCount}<span class="text-danger">*</span></label>
+                            <label for="dado1_${productCount}">Produto<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="dado1_${productCount}">
                         </div>
                     </div>

@@ -92,3 +92,21 @@ h5 {
     width: 100%;
 }
 
+.product-row {
+    position: relative;
+    border: 1px solid #706e6e; /* Borda do container */
+    padding-top: 20px; /* Espaço para o label */
+    margin-bottom: 20px;
+}
+
+.product-label {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: white;
+    padding: 0 10px;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+
+
