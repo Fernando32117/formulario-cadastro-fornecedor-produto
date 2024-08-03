@@ -10,9 +10,7 @@ $(document).ready(function () {
             '#razaoSocial',
             '#cnpj',
             '#nomeFantasia',
-            '#inscricaoEstadual',
             '#cep',
-            '#inscricaoMunicipal',
             '#endereco',
             '#numero',
             '#bairro',
@@ -59,7 +57,6 @@ $(document).ready(function () {
                     // Chamada à API ViaCEP
                     $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function (dados) {
                         if (!("erro" in dados)) {
-                            // Preencher os campos com os valores retornados
                             $('#endereco').val(dados.logradouro);
                             $('#bairro').val(dados.bairro);
                             $('#municipio').val(dados.localidade);
@@ -92,7 +89,6 @@ $(document).ready(function () {
             alert('Por favor, preencha todos os campos obrigatórios.');
         }
     });
-
 
 
     // Adicionar novo produto
@@ -262,7 +258,6 @@ $(document).ready(function () {
     // Evento de confirmação do salvamento
     $('#confirm-save-button').click(function () {
         if (validarFormulario()) {
-            // Prossiga com o salvamento dos dados
             let formData = {
                 razaoSocial: $('#razaoSocial').val(),
                 cnpj: $('#cnpj').val(),
