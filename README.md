@@ -1,2 +1,2 @@
 # teste-estagio-vflows
-Desenvolver um formulário para cadastro de fornecedores e produtos.
+Desenvolvimento de um formulário para cadastro de fornecedores e produtos.
